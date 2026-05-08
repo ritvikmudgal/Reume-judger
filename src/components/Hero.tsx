@@ -90,7 +90,13 @@ const Hero = () => {
   };
 
   return (
-    <ClickSpark sparkColor={theme === 'dark' ? '#fff' : '#de7d2f'}>
+    <ClickSpark 
+      sparkColor={theme === 'dark' ? '#fff' : '#de7d2f'}
+      sparkSize={10}
+      sparkRadius={20}
+      sparkCount={10}
+      duration={500}
+    >
       <div className="relative min-h-screen w-full flex flex-col items-center justify-start overflow-y-auto transition-colors duration-500 bg-white dark:bg-black">
         {/* Floating Toggle at Top Right */}
         <div className="absolute top-10 right-10 z-50">
