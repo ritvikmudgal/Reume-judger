@@ -60,6 +60,7 @@ const Hero = () => {
 
     try {
       const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
+      console.log("Connecting to backend at:", BACKEND_URL);
       const response = await fetch(`${BACKEND_URL}/analyze`, {
         method: 'POST',
         body: formData,
