@@ -11,7 +11,8 @@ import {
   Rocket,
   ArrowLeft,
   Download,
-  Share2
+  Share2,
+  AlertCircle
 } from 'lucide-react';
 
 interface ResultsDashboardProps {
