@@ -67,7 +67,14 @@ const Hero = () => {
       });
 
       if (!response.ok) {
-        throw new Error('Failed to analyze resume. Make sure backend is running.');
+        let errorMessage = 'Failed to analyze resume. Make sure backend is running.';
+        try {
+          const errorData = await response.json();
+          if (errorData.detail) errorMessage = `Backend Error: ${errorData.detail}`;
+        } catch (e) {
+          // ignore JSON parsing errors if the response is not JSON
+        }
+        throw new Error(errorMessage);
       }
 
       const data = await response.json();
