@@ -62,9 +62,9 @@ const ResultsDashboard = ({ data, onBack }: ResultsDashboardProps) => {
           </p>
           <button 
             onClick={onBack}
-            className="px-6 py-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-white transition-all"
+            className="px-6 py-2 bg-slate-900 dark:bg-white/10 hover:bg-slate-800 dark:hover:bg-white/20 text-white rounded-xl transition-all font-medium"
           >
-            Try again
+            Return to Home
           </button>
         </div>
       )}
@@ -73,10 +73,10 @@ const ResultsDashboard = ({ data, onBack }: ResultsDashboardProps) => {
       <div className="flex justify-between items-center mb-10 pt-10 no-print">
         <button 
           onClick={onBack}
-          className="flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
+          className="flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors font-medium"
         >
           <ArrowLeft className="w-4 h-4" />
-          Back to upload
+          Home
         </button>
         <div className="flex gap-4">
           <button 
